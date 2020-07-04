@@ -4,53 +4,58 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Mad Lib - Game</title>
+        <link href="assets/style.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
     </head>
     <body>
-
         <header class="mb-5">
             <nav class="navbar navbar-inverse bg-dark text-white">
                 <ul class="nav navbar-nav font-weight-bold">
-                  <li>Mid Libs Game</li>
+                    <li>Mid Libs Game</li>
                 </ul>
-              </nav>
+            </nav>
         </header>
-        
-        <div class="container mt-5 h-100">
+
+        <div class="container mt-5 h-100" id="form">
             <form action="#" class="mx-auto">
                 <div class="panel-heading jumbotron">
-                     
-                      
-                    <div class="row ">
-                             <div class="col-md-3 col-sm-3 col-xs-3">
-                                 <span class="help-block text-muted"> Verb</span>
-                                 <input type="text" class="form-control" placeholder="Enter verb">
-                             </div>
+                    <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                                 <span class="help-block text-muted">  Noun</span>
-                                 <input type="text" class="form-control" placeholder="Enter noun">
-                             </div>
-                       <div class="col-md-3 col-sm-3 col-xs-3">
-                                 <span class="help-block text-muted">  Adjective</span>
-                                 <input type="text" class="form-control" placeholder="Enter adjective">
-                             </div>
-                        
-                         <div class="col-md-3 col-sm-3 col-xs-3">
-                                 <span class="help-block text-muted">  Adverb</span>
-                                 <input type="text" class="form-control" placeholder="Enter Adverb">
-                             </div></div>
-                    
-                    
-                      <div class="row mt-3">
-                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                 <input type="submit" class="btn btn-warning btn-block" value="See the Result">
-                             </div>
+                            <span class="help-block text-muted"> Verb</span>
+                            <input type="text" class="form-control" id="verb" placeholder="Enter verb" required />
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Noun</span>
+                            <input type="text" class="form-control" id="noun" placeholder="Enter noun" required />
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Adjective</span>
+                            <input type="text" class="form-control" id="adjective" placeholder="Enter adjective" required />
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Adverb</span>
+                            <input type="text" class="form-control" id="adverb" placeholder="Enter Adverb" required />
+                        </div>
                     </div>
-                    
+                    <div class="row mt-3">
+                        <div class="col-md-6 col-sm-6 col-xs-6">
+                            <input type="submit" onclick="getMidLabAnswer()" class="btn btn-warning btn-block" value="See the Result" />
+                        </div>
                     </div>
+                </div>
             </form>
         </div>
-    
 
-</body>
+        <div class="container mt-5 h-100" id="result">
+            <div class="panel-heading jumbotron">
+                <p>
+                    The day I saw the Monkey King <b><span id="verb-id"></span></b> was one of the most interesting days of the year. After he did that, the king played chess on his brother's <b><span id="noun-id"></span></b> and then
+                    combed his <b><span id="adjective-id"></span></b> hair with a comb made out of old fish bones. Later that same day, I saw the Monkey King dance <b><span id="adverb-id"></span></b> in front of an audience of kangaroos and
+                    wombats.
+                </p>
+            </div>
+        </div>
+        <script src="./assets/script.js"></script>
+    </body>
 </html>
