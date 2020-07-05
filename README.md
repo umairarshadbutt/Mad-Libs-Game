@@ -2,7 +2,7 @@
  
 > Mad Libs game web page.
 
-![screenshot](assets/images/screen-shot.png)
+![screenshot](assets/screen-shot.png)
 
 ## Built With
 
