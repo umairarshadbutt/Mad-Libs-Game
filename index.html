@@ -17,7 +17,8 @@
         </header>
 
         <div class="container mt-5 h-100" id="form">
-            <form action="#" class="mx-auto">
+            <h3 class="text-center font-weight-bold text-primary mb-4">Mid Libs Game</h3>
+            <form action="#" class="mx-auto" id="resetform">
                 <div class="panel-heading jumbotron">
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
@@ -38,9 +39,9 @@
                             <input type="text" class="form-control" id="adverb" placeholder="Enter Adverb" required />
                         </div>
                     </div>
-                    <div class="row mt-3">
-                        <div class="col-md-6 col-sm-6 col-xs-6">
-                            <input type="submit" onclick="getMidLabAnswer()" class="btn btn-warning btn-block" value="See the Result" />
+                    <div class="mt-5 text-center">
+                        <div class="">
+                            <button type="submit" onclick="getMidLabAnswer()" class="btn btn-warning">See the Result</button>
                         </div>
                     </div>
                 </div>
@@ -48,11 +49,15 @@
         </div>
 
         <div class="container mt-5 h-100" id="result">
+            <h3 class="text-center font-weight-bold text-primary mb-4">Mid Libs Game's Result</h3>
             <div class="panel-heading jumbotron">
                 <p>
                     The day I saw the Monkey King <b><span id="verb-id"></span></b> was one of the most interesting days of the year. After he did that, the king played chess on his brother's <b><span id="noun-id"></span></b> and then
                     combed his <b><span id="adjective-id"></span></b> hair with a comb made out of old fish bones. Later that same day, I saw the Monkey King dance <b><span id="adverb-id"></span></b> in front of an audience of kangaroos and
                     wombats.
+                </p>
+                <p>
+                    <button type="button" class="btn btn-outline-success" onclick="playAgain()">Play Again</button>
                 </p>
             </div>
         </div>

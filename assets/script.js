@@ -17,3 +17,9 @@ function getMidLabAnswer() {
         form.style.display = "none";
     }
 }
+
+function playAgain() {
+    result.style.display = "none";
+    form.style.display = "block";
+    document.getElementById("resetform").reset();
+}
