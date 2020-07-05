@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mad Lib - Game</title>
+        <link href="assets/style.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" type="images/png" href="./assets/favicon.png" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+        <meta name="keywords" content="Mad, Libs, Game, Mad Libs, Mad Libs Game, monkey, king" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:title" content="Mad Lib - Game" />
+        <meta property="og:description" content="Mad Libs game developed by Umair Arshad" />
+        <meta property="og:image" content="./assets/favicon.png" />
+        <meta property="og:url" content="https://umairarshad.me/MadLibs/index.html" />
+        <link rel="canonical" href="https://umairarshad.me/MadLibs/index.html" />
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="Umair Arshad"
+            href="https://umairarshad.me/
+        "
+        />
+    </head>
+    <body>
+        <header class="mb-5">
+            <nav class="navbar navbar-inverse bg-dark text-white">
+                <ul class="nav navbar-nav font-weight-bold">
+                    <li><a href="https://umairarshad.me/" class="text-white">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container mt-5 h-100" id="form">
+            <h3 class="text-center font-weight-bold text-primary mb-4">Mid Libs Game</h3>
+            <form action="#" class="mx-auto" id="resetform">
+                <div class="panel-heading jumbotron">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Verb</span>
+                            <input type="text" class="form-control" id="verb" placeholder="Enter verb" required />
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Noun</span>
+                            <input type="text" class="form-control" id="noun" placeholder="Enter noun" required />
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Adjective</span>
+                            <input type="text" class="form-control" id="adjective" placeholder="Enter adjective" required />
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-3">
+                            <span class="help-block text-muted"> Adverb</span>
+                            <input type="text" class="form-control" id="adverb" placeholder="Enter Adverb" required />
+                        </div>
+                    </div>
+                    <div class="mt-5 text-center">
+                        <div class="">
+                            <button type="submit" onclick="getMidLabAnswer()" class="btn btn-warning">See the Result</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="container mt-5 h-100" id="result">
+            <h3 class="text-center font-weight-bold text-primary mb-4">Mid Libs Game's Result</h3>
+            <div class="panel-heading jumbotron">
+                <p>
+                    The day I saw the Monkey King <b><span id="verb-id"></span></b> was one of the most interesting days of the year. After he did that, the king played chess on his brother's <b><span id="noun-id"></span></b> and then
+                    combed his <b><span id="adjective-id"></span></b> hair with a comb made out of old fish bones. Later that same day, I saw the Monkey King dance <b><span id="adverb-id"></span></b> in front of an audience of kangaroos and
+                    wombats.
+                </p>
+                <p>
+                    <button type="button" class="btn btn-outline-success" onclick="playAgain()">Play Again</button>
+                </p>
+            </div>
+        </div>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyC2Iqv5U7W4_f5uVcH8Ty1kwiQ1tocJZAI",
+                authDomain: "umairme-b030c.firebaseapp.com",
+                databaseURL: "https://umairme-b030c.firebaseio.com",
+                projectId: "umairme-b030c",
+                storageBucket: "umairme-b030c.appspot.com",
+                messagingSenderId: "1071362620594",
+                appId: "1:1071362620594:web:abbe865b80dd492f49ddab",
+                measurementId: "G-4SWZ40NV57",
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+        <script src="./assets/script.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="/__/firebase/7.15.2/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="/__/firebase/7.15.2/firebase-analytics.js"></script>
+
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+    </body>
+</html>
